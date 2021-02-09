@@ -14,7 +14,7 @@ router.route('/add').post((req, res) => {
 		first_name: 'Test',
 		last_name: 'McTester',
 		pin: req.body.pin,
-		role: 'STAFF'
+		role: 'user'
 	})
 	newUser.save()
 		.then((user) => res.json(user))

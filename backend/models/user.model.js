@@ -2,6 +2,13 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
+const userRole  = {
+	admin : 'admin',
+	manager: 'manager',
+	user : 'user'
+}
+
+
 const userSchema = new Schema({
 	username: {
 		type: String,
@@ -26,8 +33,9 @@ const userSchema = new Schema({
 		unique: true
 	},
 	role: {
-		type: ['ADMIN', 'MANAGER', 'STAFF'],
-		required: true,
+		type: String,
+		enum: userRole,
+		default: userRole.user,
 	}
 }, {
 	timestamps: true,
