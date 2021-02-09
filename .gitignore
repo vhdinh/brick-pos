@@ -5,8 +5,13 @@
 /.pnp
 .pnp.js
 
+# lint
+.eslintcache
+
 # testing
 /coverage
+test-report.html
+/.scannerwork
 
 # production
 /build

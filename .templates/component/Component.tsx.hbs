@@ -1,0 +1,16 @@
+import React from 'react';
+import { {{pascalCase componentName}}Props } from './{{pascalCase componentName}}.types';
+import { {{pascalCase componentName}}Wrapper } from './{{pascalCase componentName}}.style';
+import { withErrorBoundary } from '../withErrorBoundary';
+
+function {{pascalCase componentName}}(props: {{pascalCase componentName}}Props) {
+    return (
+        <{{pascalCase componentName}}Wrapper data-testid={'{{pascalCase componentName}}-wrapper'}>
+            <p>
+                Hello World!
+            </p>
+        </{{pascalCase componentName}}Wrapper>
+    );
+}
+
+export default withErrorBoundary({{pascalCase componentName}});

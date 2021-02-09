@@ -1,0 +1,21 @@
+import React from 'react';
+import { render } from '@testing-library/react';
+import {{pascalCase componentName}} from './{{pascalCase componentName}}';
+import { {{pascalCase componentName}}Props } from './{{pascalCase componentName}}.types';
+
+describe('{{pascalCase componentName}}', () => {
+    let props: {{pascalCase componentName}}Props;
+
+    beforeEach(() => {
+        props = {
+            foo: 'bar'
+        };
+    });
+
+    const renderComponent = () => render(<{{pascalCase componentName}} {...props} />);
+
+    it('should exist', () => {
+        const component = renderComponent();
+        expect(component).not.toBeNull();
+    });
+});

@@ -20,7 +20,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src/", "dist", "images.d.ts", "webpack.config.js"],
+  "exclude": ["node_modules", "build"]
 }

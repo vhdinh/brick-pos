@@ -13,7 +13,8 @@ router.route('/add').post((req, res) => {
 		username: username,
 		first_name: 'Test',
 		last_name: 'McTester',
-		pin: req.body.pin
+		pin: req.body.pin,
+		role: 'STAFF'
 	})
 	newUser.save()
 		.then((user) => res.json(user))
@@ -27,6 +28,7 @@ router.route('/update/:id').post((req, res) => {
 			user.first_name = req.body.first_name;
 			user.last_name = req.body.last_name;
 			user.pin = Number(req.body.pin);
+			user.role = req.body.role;
 
 			user.save()
 				.then(() => res.json(user))
